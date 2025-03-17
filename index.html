@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Chair Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="title">3D Chair Viewer</h1>
+
+    <div class="color-section">
+      <h2>Choose a Color for Your Chair</h2>
+      <div class="controls">
+        <button onclick="changeColor('red')">Red</button>
+        <button onclick="changeColor('blue')">Blue</button>
+        <button onclick="changeColor('#A52A2A')">Leather Brown</button>
+      </div>
+    </div>
+
+    <script type="module">
+      import { changeColor } from "./js/script.js";
+      window.changeColor = changeColor; // ✅ Attach to global scope
+    </script>
+  </body>
+</html>
